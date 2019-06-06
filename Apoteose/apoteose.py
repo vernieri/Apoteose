@@ -71,11 +71,12 @@ def intoList(bigNum):
 def multiList(numList, lista):
 	local_num = numList
 	local_list = lista
-	print(type(local_num))
+	#print(type(local_num))
+	#print(lista[1])
 	
-
 	for i in local_list:
-		print('oi')
+		print(i)
+		
 
 
 def procedure():
