@@ -1,3 +1,3 @@
 # Apoteose
-Pseudo-Random Numbers Generate Lib \n
+Pseudo-Random Numbers Generate Lib,
 Documentation coming soon
