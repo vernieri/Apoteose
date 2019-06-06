@@ -1,3 +1,3 @@
 # Apoteose
 Pseudo-Random Numbers Generate Lib,
-Documentation coming soon
+## Documentation coming soon
