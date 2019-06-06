@@ -77,3 +77,36 @@ def multiList(numList, lista):
 	for i in local_num:
 		print('oi')
 		i=i+1
+
+def procedure():
+   time.sleep(2.5)
+
+
+def process():
+
+	t0 = time.process_time()
+	procedure()
+	string1 = str(time.process_time() - t0)
+	#print(string1)
+	#print(shaFunc(string1))
+	#print (time.clock() - t0, "seconds process time")
+
+
+	# measure wall time
+	t0 = time.time()
+	procedure()
+	string2 = str(time.time() - t0)
+	#print(string2)
+	#print(shaFunc(string2))
+	x = intoNum(string1, string2)
+	s = intoList(x)
+	#print(len(s))
+	multiList(len(s), s)
+
+	
+	#print('cheguei aqui')
+
+
+#call()
+
+#By: Vernieri		
