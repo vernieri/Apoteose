@@ -56,3 +56,14 @@ def intoNum(s1, s2):
 	#bigString = str(bigNum).replace('2', '0\n')
 	#print(bigString)
 	return bigNum
+
+def intoList(bigNum):
+	bigString = str(bigNum)
+	#print(bigString)
+	#print(bigNum)
+	#bigString = str(bigNum)
+	n = 3
+	#print(bigString)
+	out = [(bigString[i:i+n]) for i in range(0, len(bigString), n)]
+
+	return out
