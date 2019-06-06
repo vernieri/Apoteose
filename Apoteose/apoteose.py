@@ -67,3 +67,13 @@ def intoList(bigNum):
 	out = [(bigString[i:i+n]) for i in range(0, len(bigString), n)]
 
 	return out
+
+def multiList(numList, lista):
+	local_num = numList
+	local_list = lista
+	print(type(local_num))
+	
+	i = 0
+	for i in local_num:
+		print('oi')
+		i=i+1
