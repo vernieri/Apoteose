@@ -73,10 +73,10 @@ def multiList(numList, lista):
 	local_list = lista
 	print(type(local_num))
 	
-	i = 0
-	for i in local_num:
+
+	for i in local_list:
 		print('oi')
-		i=i+1
+
 
 def procedure():
    time.sleep(2.5)
