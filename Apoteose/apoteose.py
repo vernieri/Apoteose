@@ -2,21 +2,39 @@
 import time
 import hashlib
 
+def simpleRandomList():
+	controller('00', 0, 0, 0, 0)
 
-def call():
-	process()
+def randomList(qt):
+	#print(qt)
+	controller('A0', qt, 0, 0, 0)
 
+
+def controller(code, qt, wlist, key, num):
+	if(code == '00'):
+		a = process(code)
+		x = intoNum(a)
+		s = intoList(x)
+		res = multiList(len(s), s, code)
+		
+	if(code == 'A0'):	
+		a = process(code)
+		x = intoNum(a)
+		s = intoList(x, qt, 0)
+		res = multiList(len(s), s, code)
+		
 def shaFunc(string):
     """
     Return a SHA-256 hash of the given string
     """
     return hashlib.sha256(string.encode('utf-8')).hexdigest()	
-
-def intoNum(s1, s2):
-	sha1 = shaFunc(s1)
-	sha2 = shaFunc(s2)
+def intoNum(stringList):
+	sha1 = shaFunc(stringList[0])
+	sha2 = shaFunc(stringList[1])
 
 	n15 = 0
+	n25 = 0
+
 	str1 = 'a'
 	str2 = 'b'
 	str3 = 'c'
@@ -35,6 +53,8 @@ def intoNum(s1, s2):
 		n14 = n13.replace('e', '6')
 		n15 = n14.replace('f', '7')
 
+	else:
+		print("[-] ERROR 0x01A")
 
 	#print("depois:")
 	#print(n15)
@@ -48,6 +68,8 @@ def intoNum(s1, s2):
 		n24 = n23.replace('e', '6')
 		n25 = n24.replace('f', '7')
 
+	else:
+		print("[-] ERRO 0x01B")
 
 	#print("depois:")
 	#print(n15)
@@ -55,19 +77,39 @@ def intoNum(s1, s2):
 	#bigNum = int(n15)*int(n25)
 	#bigString = str(bigNum).replace('2', '0\n')
 	#print(bigString)
+
 	return bigNum
 
-def intoList(bigNum):
-	bigString = str(bigNum)
-	#print(bigString)
-	#print(bigNum)
-	#bigString = str(bigNum)
-	n = 3
-	#print(bigString)
-	out = [(bigString[i:i+n]) for i in range(0, len(bigString), n)]
+def intoList(bigNum, qt, num):
+	if num != 0:
+		print('Todo')
 
-	return out
+	else:
 
+		bigString = str(bigNum)
+		#print(bigString)
+		#print(bigNum)
+		#bigString = str(bigNum)
+		n = 3
+		#print(bigString)
+		out = [(bigString[i:i+n]) for i in range(0, len(bigString), n)]
+		lenList = len(out)
+		print(lenList)
+		print(qt)
+		if(lenList != qt):
+			checkSize(lenList, qt)
+
+		return out
+
+def checkSize(lenList, qt):
+	if(lenList < qt):
+		missingSize(lenList, qt)
+	else:
+		overSize(lenList qt)	
+
+def missingSize(lenList, qt):
+	print('TODO')
+	
 def multiList(numList, lista):
 	local_num = numList
 	local_list = lista
@@ -77,37 +119,27 @@ def multiList(numList, lista):
 	for i in local_list:
 		print(i)
 		
-
-
 def procedure():
    time.sleep(2.5)
 
 
-def process():
+def process(code):
+
+	stringList = []
 
 	t0 = time.process_time()
 	procedure()
 	string1 = str(time.process_time() - t0)
-	#print(string1)
-	#print(shaFunc(string1))
-	#print (time.clock() - t0, "seconds process time")
 
-
-	# measure wall time
 	t0 = time.time()
 	procedure()
 	string2 = str(time.time() - t0)
-	#print(string2)
-	#print(shaFunc(string2))
-	x = intoNum(string1, string2)
-	s = intoList(x)
-	#print(len(s))
-	multiList(len(s), s)
 
-	
-	#print('cheguei aqui')
+	stringList.append(string1)
+	stringList.append(string2)
 
+	#print(stringList)
 
-#call()
+	return stringList
 
-#By: Vernieri		
+#By: Vernieri

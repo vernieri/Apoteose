@@ -2,7 +2,15 @@
 from Apoteose import *
 
 def getValue():
-	call()
+	#simpleRandomList() #Return a simple random numbers list
+	randomList(10) #return a specific qt of numbers
+	#randomWord(wordlist, qt) #return a random word from a List or File
+	#keyRandom(key, qt) #You Pass a Key, that key will be used to make randomic values, then return
+	#randomOdds(qt) #Qt of odds numbers you want
+	#randomPairs(qt) #qt of pairs numbers
+	#randomToken() #generate a Token
+	#randomHugeNumbers(num, qt) #you choose the size of numbers. 2 digits? 6 digits?
+	#randomInsane(rep, qt) #You can loop the core to generate more Randomic values.
 
 	#print('%s' % x)
 getValue()	
