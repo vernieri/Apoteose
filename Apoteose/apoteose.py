@@ -9,6 +9,14 @@ def randomList(qt):
 	#print(qt)
 	controller('A0', qt, 0, 0, 0)
 
+
+def controller(code, qt, wlist, key, num):
+	if(code == '00'):
+		a = process(code)
+		x = intoNum(a)
+		s = intoList(x)
+		res = multiList(len(s), s, code)	
+	
 def shaFunc(string):
     """
     Return a SHA-256 hash of the given string
