@@ -80,17 +80,36 @@ def intoNum(stringList):
 
 	return bigNum
 
-def intoList(bigNum):
-	bigString = str(bigNum)
-	#print(bigString)
-	#print(bigNum)
-	#bigString = str(bigNum)
-	n = 3
-	#print(bigString)
-	out = [(bigString[i:i+n]) for i in range(0, len(bigString), n)]
+def intoList(bigNum, qt, num):
+	if num != 0:
+		print('Todo')
 
-	return out
+	else:
 
+		bigString = str(bigNum)
+		#print(bigString)
+		#print(bigNum)
+		#bigString = str(bigNum)
+		n = 3
+		#print(bigString)
+		out = [(bigString[i:i+n]) for i in range(0, len(bigString), n)]
+		lenList = len(out)
+		print(lenList)
+		print(qt)
+		if(lenList != qt):
+			checkSize(lenList, qt)
+
+		return out
+
+def checkSize(lenList, qt):
+	if(lenList < qt):
+		missingSize(lenList, qt)
+	else:
+		overSize(lenList qt)	
+
+def missingSize(lenList, qt):
+	print('TODO')
+	
 def multiList(numList, lista):
 	local_num = numList
 	local_list = lista
