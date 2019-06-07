@@ -28,12 +28,13 @@ def shaFunc(string):
     Return a SHA-256 hash of the given string
     """
     return hashlib.sha256(string.encode('utf-8')).hexdigest()	
-
-def intoNum(s1, s2):
-	sha1 = shaFunc(s1)
-	sha2 = shaFunc(s2)
+def intoNum(stringList):
+	sha1 = shaFunc(stringList[0])
+	sha2 = shaFunc(stringList[1])
 
 	n15 = 0
+	n25 = 0
+
 	str1 = 'a'
 	str2 = 'b'
 	str3 = 'c'
@@ -52,6 +53,8 @@ def intoNum(s1, s2):
 		n14 = n13.replace('e', '6')
 		n15 = n14.replace('f', '7')
 
+	else:
+		print("[-] ERROR 0x01A")
 
 	#print("depois:")
 	#print(n15)
@@ -65,6 +68,8 @@ def intoNum(s1, s2):
 		n24 = n23.replace('e', '6')
 		n25 = n24.replace('f', '7')
 
+	else:
+		print("[-] ERRO 0x01B")
 
 	#print("depois:")
 	#print(n15)
@@ -72,6 +77,7 @@ def intoNum(s1, s2):
 	#bigNum = int(n15)*int(n25)
 	#bigString = str(bigNum).replace('2', '0\n')
 	#print(bigString)
+
 	return bigNum
 
 def intoList(bigNum):
