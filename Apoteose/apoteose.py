@@ -15,8 +15,14 @@ def controller(code, qt, wlist, key, num):
 		a = process(code)
 		x = intoNum(a)
 		s = intoList(x)
-		res = multiList(len(s), s, code)	
-	
+		res = multiList(len(s), s, code)
+		
+	if(code == 'A0'):	
+		a = process(code)
+		x = intoNum(a)
+		s = intoList(x, qt, 0)
+		res = multiList(len(s), s, code)
+		
 def shaFunc(string):
     """
     Return a SHA-256 hash of the given string
