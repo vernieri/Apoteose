@@ -2,9 +2,12 @@
 import time
 import hashlib
 
+def simpleRandomList():
+	controller('00', 0, 0, 0, 0)
 
-def call():
-	process()
+def randomList(qt):
+	#print(qt)
+	controller('A0', qt, 0, 0, 0)
 
 def shaFunc(string):
     """
