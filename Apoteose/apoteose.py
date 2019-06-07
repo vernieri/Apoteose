@@ -123,45 +123,92 @@ def intoNum(stringList):
 	bigNum = (int(n15)*int(n25))	
 
 	return bigNum
+
 def intoList(bigNum, qt, num):
 	if num != 0:
-		print('Todo')
+		print('Todo, num')
 
 	else:
 
 		bigString = str(bigNum)
-		#print(bigString)
-		#print(bigNum)
-		#bigString = str(bigNum)
 		n = 3
-		#print(bigString)
-		out = [(bigString[i:i+n]) for i in range(0, len(bigString), n)]
+		out = toStringList(bigString)
 		lenList = len(out)
-		print(lenList)
-		print(qt)
-		if(lenList != qt):
-			checkSize(lenList, qt)
+
+		while (lenList < qt):
+			check = checkSize(lenList, qt)
+			#print(qt, check)
+			if(qt == check):
+				flag = 0
+
+			else: 
+				flag = 1	
+
+			local_list = addSize(flag, bigNum, qt, lenList)
+			out = local_list[0]
+			lenList = local_list[1]
+			bigNum = local_list[2]
 
 		return out
 
-def checkSize(lenList, qt):
-	if(lenList < qt):
-		missingSize(lenList, qt)
-	else:
-		overSize(lenList qt)	
+def toStringList(bigString):
+	n = 3
+	out = [(bigString[i:i+n]) for i in range(0, len(bigString), n)]
+	return out	
 
-def missingSize(lenList, qt):
-	print('TODO')
+def checkSize(lenList, qt):
+
+	if(lenList < qt):
+
+		x = (qt - lenList)
+		return x
+		
+	else:
+		return qt	
+
+def addSize(flag, bigNum, qt, lenList):
+	lista = []
+	if(flag == 0):
+		
+		bigString = str(bigNum)
+		out = toStringList(bigString)
+		lista.append(out)
+		lista.append(lenList)
+		lista.append(bigNum)
+		return lista
+
+
+	else:	
+		
+		newNum = ((bigNum * bigNum) * (bigNum * bigNum)) * bigNum
+		bigString = str(newNum)
+		out = toStringList(bigString)
+		lenList = len(out)
+		lista.append(out)
+		lista.append(lenList)
+		lista.append(newNum)
+		return lista
 	
-def multiList(numList, lista):
+
+def multiList(numList, lista, code, qt):
 	local_num = numList
 	local_list = lista
-	#print(type(local_num))
-	#print(lista[1])
+	local_qt = qt
+	cont = 0
+	listao = []
 	
 	for i in local_list:
-		print(i)
-		
+		x = int(i)+int(i)
+		#print(x)
+		listao.append(x)
+		cont = cont + 1
+		if(cont == local_qt):
+			break
+
+	return listao
+
+
+
 def procedure():
    time.sleep(2.5)
 
@@ -180,8 +227,6 @@ def process(code):
 
 	stringList.append(string1)
 	stringList.append(string2)
-
-	#print(stringList)
 
 	return stringList
 
