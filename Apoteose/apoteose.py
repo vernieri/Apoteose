@@ -8,20 +8,70 @@ def simpleRandomList():
 def randomList(qt):
 	#print(qt)
 	controller('A0', qt, 0, 0, 0)
+	
+def randomWord(file, qt):
+	controller('B0', qt, file, 0, 0)		
 
-
-def controller(code, qt, wlist, key, num):
+def controller(code, qt, file, key, num):
 	if(code == '00'):
 		a = process(code)
 		x = intoNum(a)
 		s = intoList(x)
-		res = multiList(len(s), s, code)
-		
+		res = multiList(len(s), s, code, 0)	
+
+		return res
+
 	if(code == 'A0'):	
 		a = process(code)
 		x = intoNum(a)
 		s = intoList(x, qt, 0)
-		res = multiList(len(s), s, code)
+		res = multiList(len(s), s, code, qt)
+		return res
+
+	if(code == 'B0'):
+		numLines = readFile(file, 1, qt, 0)
+		a = process(code)
+		x = intoNum(a)
+		s = intoList(x, qt, 0)
+		lista = multiList(len(s), s, code, 0)
+		res = readFile(file, 0, qt, lista)
+
+		return res 
+	
+def readFile(file, flag, qt, lista):
+	plista = []
+	print(lista)
+
+	f = str(file)+".txt"
+	with open(f) as wordlist:
+
+		if(flag > 0):
+			#print(f)
+			if (qt > file_len(f)):
+				print("[-] ERROR 0x02A\n")
+				print("[-] A quantidade passada eh maior que o numero de linhas")
+			else:
+				numLines = file_len(f)
+				return numLines
+
+		else:
+			numLines = file_len(f)
+			cont = 0
+			while cont != numLines:
+				plista.append(linecache.getline(f, lista[cont]))
+				cont = cont + 1
+
+		return plista		
+
+
+		#return numLines
+		
+def file_len(file):
+    with open(file) as f:
+        for i, l in enumerate(f):
+            pass
+    return i + 1
+	
 		
 def shaFunc(string):
     """
