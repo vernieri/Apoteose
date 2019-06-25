@@ -85,8 +85,8 @@ def intoNum(stringList):
 	#print(sha1)
 	#print(sha2)
 
-	n15 = 0
-	n25 = 0
+	n15 = 0 #i'm getting some errors, dats why i'm initializing these vars.
+	n25 = 0 #var2
 
 	str1 = 'a'
 	str2 = 'b'
