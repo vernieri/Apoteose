@@ -1,7 +1,7 @@
 # APOTEOSE
 ![alt text](https://live.staticflickr.com/23/32858192_5d57147cad_b.jpg)
 all credits: drbakker, https://www.flickr.com/photos/36437299@N00 
-
+License: https://search.creativecommons.org/photos/dcd2fb65-9804-49ff-9bac-5635d98282b8
 
 ## Generate Pseudo-Random Numbers
 
