@@ -26,6 +26,12 @@ $ python example.py
 4. Now, just import Apoteose and use on your own Projects using:
 5. from apoteose import *
 
+## Documentation
+
+Apoteose() -> return ONE random number
+ApoteoseList(value) -> Return a List of RandomNumbers, pass how many with (Value) param
+ApoteoseRange(first, last) -> return ONE random number between the range of (first) and (last) params.
+
 ## Contributing
 
 If You found a Bug or wants to help please, feel free to commit.
