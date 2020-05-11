@@ -24,6 +24,17 @@ def apoteose():
 	number = int(n1[0])+int(n2[1])
 	return number
 
+def apoteoseList(value):
+	lista = []
+
+	i = 0
+	while(i < int(value)):
+		number = apoteose()
+		lista.append(number)
+		i = i + 1
+
+	return lista
+
 
 def procedure():
    time.sleep(0.0005)
