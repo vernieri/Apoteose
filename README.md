@@ -29,8 +29,11 @@ $ python example.py
 ## Documentation
 
 Apoteose() -> return ONE random number
+
 ApoteoseList(value) -> Return a List of RandomNumbers, pass how many with (Value) param
+
 ApoteoseRange(first, last) -> return ONE random number between the range of (first) and (last) params.
+
 
 ## Contributing
 
