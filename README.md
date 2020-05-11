@@ -1,5 +1,5 @@
 # APOTEOSE
-![alt text](https://santhatela.com.br/wp-content/uploads/2018/11/giordano-apoteose-b.jpg)
+
 
 ## Generate Pseudo-Random Numbers
 
