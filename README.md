@@ -1,4 +1,6 @@
 # APOTEOSE
+![alt text](https://live.staticflickr.com/23/32858192_5d57147cad_b.jpg)
+all credits: drbakker, https://www.flickr.com/photos/36437299@N00 
 
 
 ## Generate Pseudo-Random Numbers
