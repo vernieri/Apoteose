@@ -44,5 +44,3 @@ If You want to contact me please: https://bit.ly/2yih5wX
 ## Version 
 
 APOTEOSE IS RELEASE ON VERSION 1.0.0, 11 MAY 2020
-
-### More Infos, License, Coming Soon
