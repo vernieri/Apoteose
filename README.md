@@ -27,6 +27,7 @@ $ python example.py
 5. from apoteose import *
 
 ## Documentation
+from apoteose import *
 
 Apoteose() -> return ONE random number
 
