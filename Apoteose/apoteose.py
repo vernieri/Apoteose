@@ -36,6 +36,21 @@ def apoteoseList(value):
 	return lista
 
 
+def apoteoseRange(first, last):
+	msg = 'not found'
+	while(msg != 'found'):
+		number = apoteose()
+		if((number >= int(first)) and (number <= int(last))):
+			msg = 'found'
+		else:
+			msg = 'not found'	
+
+	#print(number)
+	return number
+
+
+
+
 def procedure():
    time.sleep(0.0005)
 
