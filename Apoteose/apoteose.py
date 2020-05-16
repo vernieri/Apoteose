@@ -49,6 +49,19 @@ def apoteoseRange(first, last):
 	return number
 
 
+def apoteoseLargeRange(first, last):
+	msg = 'not found'
+	while(msg != 'found'):
+		l1 = apoteose()
+		large = (l1*int(first))/2
+		number = apoteose()+int(large)
+		if((number >= int(first)) and (number <= int(last))):
+			msg = 'found'
+		else:
+			msg = 'not found'	
+
+	#print(number)
+	return number
 
 
 def procedure():
