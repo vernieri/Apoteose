@@ -35,6 +35,7 @@ ApoteoseList(value) -> Return a List of RandomNumbers, pass how many with (Value
 
 ApoteoseRange(first, last) -> return ONE random number between the range of (first) and (last) params.
 
+ApoteoseLargeRange(first, last) -> return ONE large number between the range of (first) and (last) parans
 
 ## Contributing
 
@@ -43,4 +44,4 @@ If You want to contact me please: https://bit.ly/2yih5wX
 
 ## Version 
 
-APOTEOSE IS RELEASE ON VERSION 1.0.0, 11 MAY 2020
+APOTEOSE IS RELEASE ON VERSION 1.1.0, 15 MAY 2020
